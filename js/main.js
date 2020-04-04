@@ -4,7 +4,7 @@ function revealText() {
 
 // Increase/descrease font size
 $('#increasetext').click(function() {
-    curSize = parseInt($('#content').css('font-size')) + 2;
+    curSize = parseInt($('#content').css('font-size')) + 3;
     if (curSize <= 32)
         $('#content').css('font-size', curSize);
 });
