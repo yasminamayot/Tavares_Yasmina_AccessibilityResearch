@@ -32,117 +32,149 @@
 </head>
 
 <body>
-    <main id="app">
+        <!--/start content-->
+    <main id="content" role="main">
         <div class="container">
-<!--main header welcome-->
-            <div class="jumbotron">
-                <h1 class="my-5 text-center display-5 wow fadeInDown" id="mainText">Welcome to Accessibility for Everyone.</h1>
-
-                <p class="genText text-center">We believe in the power of accessibility and its critical importance within our everyday lives. Whether you need closed caption programming to watch your favourite TV Show or Movies, or on-screen lyrics to sing along to your favourite songs, accessibility is present even if you don't notice it!</p>
-
-            </div>
-<!--End of main header welcome-->
+            <!--main header welcome-->
+                <div class="jumbotron">
+                    <h1 class="my-5 text-center display-5 wow fadeInDown" id="mainText" alt="accessibility welcome">Welcome to Accessibility for Everyone.</h1>
+    
+                    <p class="genText text-center" alt="accessibility importance text">We believe in the power of accessibility and its critical importance within our everyday lives. Whether you need closed caption programming to watch your favourite TV Show or Movies, or on-screen lyrics to sing along to your favourite songs, accessibility is present even if you don't notice it!</p> <br />
+    
+    
+                    <p class="text-center" alt="accessibility font sizing">One of the most crucial but often neglected components of accessibility is <i>font size.</i> <br />To toggle between font sizes, click the size you're most comfortable reading for your eyesight.</p>
+    
+                    <!--/.textcontrols-->
+        <div class="textcontrols">
+            <button role="button" class="peach-gradient btn-lg btn-block text-white" id="decreasetext"><span>smaller</span>
+            </button>
+            <button role="button" class="peach-gradient btn-lg btn-block text-white" id="resettext">
+                <span>normal</span>
+            </button>
+            <button role="button" class="peach-gradient btn-lg btn-block text-white" id="increasetext">
+                <span>bigger</span>
+            </button>
+        </div>
+        <!--/.textcontrols-->
+                
         
-<!-- Movie and TV Show Section-->
-            <div class="jumbotron">
-                <div class="col md-12">
-                    <h1 class="text-center mb-5">Video Files with Closed Captioning</h1>
-                    <h3 class="showFriends text-center mb-5"><i>Friends (1994):</i> Chandler & Ross Clip</h3>
+                
+    
+                </div>
+    <!--End of main header welcome-->
+            
+    <!-- Movie and TV Show Section-->
+                <div class="jumbotron">
+                    <div class="col md-12">
+                        <h1 class="text-center mb-5" alt="closed caption videos">Video Files with Closed Captioning</h1>
+                        <h3 class="showFriends text-center mb-5" alt="friends video clip closed caption"><i>Friends (1994):</i> Chandler & Ross Clip</h3>
+                                <video controls style="width:100%;">
+                                    <source src="video/friends.mp4" alt="friends show mp4" type="video/mp4"/>
+                                    <track label="English" kind="subtitles" srclang="en" src="vtt/friends.vtt" default />
+                                </video>
+                        </div>
+                </div>
+    
+                
+                <div class="jumbotron">
+                    <div class="col md-12">
+                        <h3 class="showHomeAlone text-center mb-5" alt="home alone video clip closed caption"><i>Home Alone (1990):</i> Official Trailer</h3>
                             <video controls style="width:100%;">
-                                <source src="video/friends.mp4" type="video/mp4"/>
-                                <track label="English" kind="subtitles" srclang="en" src="vtt/friends.vtt" default />
+                                <source src="video/home_alone.mp4" alt="home alone movie trailer mp4" type="video/mp4"/>
+                                <track label="English" kind="subtitles" srclang="en" src="vtt/homealone.vtt" default />
                             </video>
                     </div>
-            </div>
-
-            
+                </div>
+    <!-- End of Movie and TV Show Section-->
+    
+    <!--Audio Clip Section-->
             <div class="jumbotron">
-                <div class="col md-12">
-                    <h3 class="showHomeAlone text-center mb-5"><i>Home Alone (1990):</i> Official Trailer</h3>
-                        <video controls style="width:100%;">
-                            <source src="video/home_alone.mp4" type="video/mp4"/>
-                            <track label="English" kind="subtitles" srclang="en" src="vtt/homealone.vtt" default />
-                        </video>
+                <div class="row">
+                    <div class="col md-12">
+                        <h1 class="text-center mb-5" alt="audio file transcripts">Audio Files with Transcripts</h1>
+                    <div class="audioTitle text-center my-5">
+                        <h2>Smells Like Teen Spirit</h2>
+                        <h3>Nirvana (1991)</h3>
+                    </div>
+    
+                    <div class="text-center">
+                        <audio controls id="audioSrc">
+                            <source src="audio/nirvana.mp3" alt="nirvana mp3 audio" type="audio/mpeg">
+                                <source src="audio/nirvana.ogg" type="audio/ogg">
+                        </audio>
+                        
+                        <div class="lyricsPrompt mt-5">
+                        <h3>To view the lyrics of this song: <br /><button class="btn peach-gradient btn-lg btn-block text-white mt-2 mb-5" onclick="revealText()" type="button">Click Here</button></h3>
+                        </div>
+    
+                        <div class="showLyrics">
+                        <p>
+                            Load up on guns, bring your friends<br />
+                            It's fun to lose and to pretend<br />
+                            She's over-bored and self-assured<br />
+                            Oh no, I know a dirty word<br />
+                            Hello, hello, hello, how low<br />
+                            Hello, hello, hello, how low<br />
+                            Hello, hello, hello, how low<br />
+                            Hello, hello, hello<br />
+                            With the lights out, it's less dangerous<br />
+                            Here we are now, entertain us<br />
+                            I feel stupid and contagious<br />
+                            Here we are now, entertain us<br />
+                            A mulatto, an albino, a mosquito, my libido<br />
+                            Yeah, hey<br />
+                            I'm worse at what I do best<br />
+                            And for this gift I feel blessed<br />
+                            Our little group has always been<br />
+                            And always will until the end<br />
+                            Hello, hello, hello, how low<br />
+                            Hello, hello, hello, how low<br />
+                            Hello, hello, hello, how low<br />
+                            Hello, hello, hello<br />
+                            With the lights out, it's less dangerous<br />
+                            Here we are now, entertain us<br />
+                            I feel stupid and contagious<br />
+                            Here we are now, entertain us<br />
+                            A mulatto, an albino, a mosquito, my libido<br />
+                            Yeah, hey<br />
+                            And I forget just why I taste<br />
+                            Oh yeah, I guess it makes me smile<br />
+                            I found it hard, it's hard to find<br />
+                            Oh well, whatever, never mind<br />
+                            Hello, hello, hello, how low<br />
+                            Hello, hello, hello, how low<br />
+                            Hello, hello, hello, how low<br />
+                            Hello, hello, hello<br />
+                            With the lights out, it's less dangerous<br />
+                            Here we are now, entertain us<br />
+                            I feel stupid and contagious<br />
+                            Here we are now, entertain us<br />
+                            A mulatto, an albino, a mosquito, my libido<br />
+                            A denial, a denial, a denial, a denial, a denial<br />
+                            A denial, a denial, a denial, a denial<br />
+                        </p>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
-<!-- End of Movie and TV Show Section-->
-
-<!--Audio Clip Section-->
+    <!--End of Audio Clip Section-->
+    
+    <!--Footer conclusion and farewell-->
         <div class="jumbotron">
             <div class="row">
                 <div class="col md-12">
-                <div class="audioTitle text-center my-5">
-                    <h1>Smells Like Teen Spirit</h1>
-                    <h2>Nirvana (1991)</h2>
-                </div>
-
-                <div class="text-center">
-                    <audio controls id="audioSrc">
-                        <source src="audio/nirvana.mp3" type="audio/mpeg">
-                            <source src="audio/nirvana.ogg" type="audio/ogg">
-                    </audio>
-                    
-                    <div class="lyricsPrompt mt-5">
-                    <h3>To view the lyrics of this song: <br /><button class="btn peach-gradient btn-lg btn-block text-white mt-2 mb-5" onclick="revealText()" type="button">Click Here</button></h3>
-                    </div>
-
-                    <div class="showLyrics">
-                    <p>
-                        Load up on guns, bring your friends<br />
-                        It's fun to lose and to pretend<br />
-                        She's over-bored and self-assured<br />
-                        Oh no, I know a dirty word<br />
-                        Hello, hello, hello, how low<br />
-                        Hello, hello, hello, how low<br />
-                        Hello, hello, hello, how low<br />
-                        Hello, hello, hello<br />
-                        With the lights out, it's less dangerous<br />
-                        Here we are now, entertain us<br />
-                        I feel stupid and contagious<br />
-                        Here we are now, entertain us<br />
-                        A mulatto, an albino, a mosquito, my libido<br />
-                        Yeah, hey<br />
-                        I'm worse at what I do best<br />
-                        And for this gift I feel blessed<br />
-                        Our little group has always been<br />
-                        And always will until the end<br />
-                        Hello, hello, hello, how low<br />
-                        Hello, hello, hello, how low<br />
-                        Hello, hello, hello, how low<br />
-                        Hello, hello, hello<br />
-                        With the lights out, it's less dangerous<br />
-                        Here we are now, entertain us<br />
-                        I feel stupid and contagious<br />
-                        Here we are now, entertain us<br />
-                        A mulatto, an albino, a mosquito, my libido<br />
-                        Yeah, hey<br />
-                        And I forget just why I taste<br />
-                        Oh yeah, I guess it makes me smile<br />
-                        I found it hard, it's hard to find<br />
-                        Oh well, whatever, never mind<br />
-                        Hello, hello, hello, how low<br />
-                        Hello, hello, hello, how low<br />
-                        Hello, hello, hello, how low<br />
-                        Hello, hello, hello<br />
-                        With the lights out, it's less dangerous<br />
-                        Here we are now, entertain us<br />
-                        I feel stupid and contagious<br />
-                        Here we are now, entertain us<br />
-                        A mulatto, an albino, a mosquito, my libido<br />
-                        A denial, a denial, a denial, a denial, a denial<br />
-                        A denial, a denial, a denial, a denial<br />
-                    </p>
-                    </div>
-                </div>
+                    <h4 class="text-center">We hope you understand a little bit more about the importance of accessibility to be inclusive for people of all ages and backgrounds!</h4>
                 </div>
             </div>
         </div>
-<!--End of Audio Clip Section-->
-        </div>
-    </main>
+    <!--End of Footer conclusion and farewell-->
+    
+            </div>
 
-    <script>document.querySelector('.showLyrics').style.display='none';</script>
-    <script src="js/main.js"></script>
+    </main>
+    <!--/end content-->
+
     <!--MD BOOTSTRAP -->
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -153,6 +185,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+    <script src="js/main.js"></script>
 
   <script>
     new WOW().init();
